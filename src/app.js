@@ -1,0 +1,24 @@
+import express from "express"
+import cors from "cors"
+
+const app = express()
+
+//for cors middle-ware
+app.use(
+  cors({
+    origin: process.env.CORS_ORIGIN,
+    credentials: true
+  })
+)
+
+//for express middlewares
+app.use(express.json({
+  limit: "16kb"
+}))
+app.use(express.urlencoded({
+  extended: true, //all this latest properties of urlencoded that are available
+  limit: "16kb"
+}))
+app.use(express.static("public")) //allowing frontend as the whole public directory
+
+export { app }
