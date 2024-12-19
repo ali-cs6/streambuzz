@@ -1,7 +1,7 @@
-class ApiError extends Error {
+class ApiError extends Error { //Error- Builtin Class
   constructor(
     statusCode,
-    message = "something went wrong",
+    message = "Something went wrong",
     errors = [],
     stack = ""
   ) {
@@ -10,7 +10,7 @@ class ApiError extends Error {
     this.data = null
     this.message = message
     this.success = false
-    this.errors = errors
+    this.errors = errors;
 
     if (stack) {
       this.stack = stack

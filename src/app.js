@@ -21,4 +21,10 @@ app.use(express.urlencoded({
 }))
 app.use(express.static("public")) //allowing frontend as the whole public directory
 
+// import routes
+import healthcheckRouter from "./routes/healthcheck.routes.js"
+
+// routes
+app.use("/api/v1/healthcheck", healthcheckRouter)
+
 export { app }

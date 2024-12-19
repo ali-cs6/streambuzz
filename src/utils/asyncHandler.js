@@ -1,5 +1,5 @@
-const asyncHandler = (requestHandler) => {
-  return (req, res, next) => { //next is middleware
+const asyncHandler = (requestHandler) => { //Higher order function
+  return (req, res, next) => { //next: middleware
     Promise.resolve(requestHandler(req, res, next)).catch((err) => next(err))
   }
 }
