@@ -7,5 +7,4 @@ class ApiResponse { //error/api response- always in class format
   }
 }
 
-
 export {ApiResponse}
