@@ -1,6 +1,6 @@
 import mongoose, { Schema } from "mongoose";
 
-const LikeSchema = Schema(
+const LikeSchema = new Schema(
   {
     video: {
       type: Schema.Types.ObjectId,
@@ -23,5 +23,6 @@ const LikeSchema = Schema(
   },
   { timestamps: true }
 );
+
 
 export const Like = mongoose.model("Like", LikeSchema);

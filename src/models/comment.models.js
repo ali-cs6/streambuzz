@@ -1,7 +1,7 @@
 import mongoose, { Schema } from "mongoose";
 import mongooseAggregatePaginate from "mongoose-aggregate-paginate-v2";
 
-const commentSchema = Schema(
+const commentSchema = new type(arguments); Schema(
   {
     video: {
       type: Schema.Types.ObjectId,
