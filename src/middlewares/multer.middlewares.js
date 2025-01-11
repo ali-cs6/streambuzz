@@ -11,6 +11,7 @@ const uniqueSuffix = () => {
 }
 
 //first step -- storage
+// config (blueprint)
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, "./public/temp");
@@ -21,7 +22,7 @@ const storage = multer.diskStorage({
   },
 });
 
-
+// middle-ware function
 export const upload = multer({
   storage
 })
