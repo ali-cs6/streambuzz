@@ -20,7 +20,7 @@ export const verifyJWT = asyncHandler(async(req, _, next) => {
       throw new ApiError(401, "Invalid access token or user not found")
     }
     //custom prop in req
-    //this is user is authunticated
+    //this user is authunticated
     req.user = user
     //passing on the context
     next()
